@@ -56,14 +56,7 @@ public class RoadGenerator : MonoBehaviour
     void Start()
     {
 
-      
 
-
-    }
-
-
-    private void Update()
-    {
         MeshFilter meshFilter = this.GetComponent<MeshFilter>();
 
         MeshCollider meshCollider = this.GetComponent<MeshCollider>();
@@ -117,6 +110,13 @@ public class RoadGenerator : MonoBehaviour
         meshFilter.mesh = mg.CreateMesh();
 
         meshCollider.sharedMesh = meshFilter.mesh;
+
+    }
+
+
+    private void Update()
+    {
+       
 
     }
 

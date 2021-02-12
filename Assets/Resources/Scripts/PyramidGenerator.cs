@@ -13,8 +13,6 @@ public class PyramidGenerator : MonoBehaviour
     private int subMeshSize = 4;
 
 
-
-    // Update is called once per frame
     void Start()
     {
         MeshFilter meshFilter = this.GetComponent<MeshFilter>();

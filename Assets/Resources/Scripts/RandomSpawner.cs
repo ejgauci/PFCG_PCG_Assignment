@@ -13,7 +13,7 @@ public class RandomSpawner : MonoBehaviour
 
     private void Start()
     {
-        
+        //locatons the target or player can spawn
         Locations.Add(new Vector3(25, 0, 25));  //1
         Locations.Add(new Vector3(-25, 0, 15));//2
         Locations.Add(new Vector3(25, 0, 15));//3

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MeshGenerator
 {
-    private List<Vector3> vertices = new List<Vector3>(); //list of vertices - store our points in our mesh
-
-    private List<int> indices = new List<int>(); //list of indices that point to the index location in our vertices list
-
-    private List<Vector3> normals = new List<Vector3>(); // this defines the direction of each vertex
-
-    private List<Vector2> uvs = new List<Vector2>(); // store the coordinates of our uvs
-
-    private List<int>[] submeshIndices = new List<int>[] { }; // an array of submesh indices
+    
+    //stores the point in mesh 
+    private List<Vector3> vertices = new List<Vector3>();
+    //index location in our vertices list
+    private List<int> indices = new List<int>(); 
+    //direction of each vertex
+    private List<Vector3> normals = new List<Vector3>();
+    //positions of uvs
+    private List<Vector2> uvs = new List<Vector2>(); 
+    //array of submesh indices
+    private List<int>[] submeshIndices = new List<int>[] { };
 
     public MeshGenerator(int submeshCount)
     {
@@ -34,12 +36,12 @@ public class MeshGenerator
 
     public void BuildTriangle(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 normal, int subMesh)
     {
-        // 4. index of each vertex within the list of vertices
+        // index of each vertex within the list of vertices
         int p0Index = vertices.Count;
         int p1Index = vertices.Count + 1;
         int p2Index = vertices.Count + 2;
 
-        //5. add the index of each vertex to the indices
+        //add the index of each vertex to the indices
         indices.Add(p0Index);
         indices.Add(p1Index);
         indices.Add(p2Index);
@@ -49,17 +51,17 @@ public class MeshGenerator
         submeshIndices[subMesh].Add(p2Index);
 
 
-        //1. add each point to our vertices list
+        //each point addded to vertex list
         vertices.Add(p0); 
         vertices.Add(p1); 
         vertices.Add(p2);
 
-        //2. add normals to our normals list
+        //add normals
         normals.Add(normal);
         normals.Add(normal);
         normals.Add(normal);
 
-        //3. Add each UV coordinate to our UV list
+        //add uv positios to uv list
         uvs.Add(new Vector2(0, 0));
         uvs.Add(new Vector2(0, 1));
         uvs.Add(new Vector2(1, 1));

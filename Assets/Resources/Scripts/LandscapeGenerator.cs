@@ -23,10 +23,7 @@ public class LandscapeGenerator : MonoBehaviour
     [SerializeField]
     private float bumpheight = 5f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        }
+    
 
     void Start()
     {
@@ -48,10 +45,6 @@ public class LandscapeGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                //points[x, y] = new Vector3(cellsize * x,
-                //                          Mathf.PerlinNoise(
-                //                             x * bumpyness * 0.1f, y * bumpyness * 0.1f) * bumpheight,
-                //                         cellsize * y);
 
                 points[x, y] = new Vector3(cellsize * x,
                                           Mathf.PerlinNoise(
